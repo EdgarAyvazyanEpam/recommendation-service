@@ -8,6 +8,8 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import io.swagger.v3.oas.annotations.Parameter;
+import java.util.HashMap;
+import java.util.Map;
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
@@ -61,6 +63,8 @@ public class CryptoRecommendationController {
                                                                        @NonNull @NotBlank @PathVariable("crypto") String symbol) {
         log.info("Request to get details for the crypto value: %s", symbol);
         List<CryptoRateDto> cryptoValuesBySymbol = cryptoService.getCryptoValuesBySymbol(symbol);
+        Map<String,String> n = new HashMap<>();
+
         return new ResponseEntity<>(cryptoValuesBySymbol, HttpStatus.OK);
     }
 

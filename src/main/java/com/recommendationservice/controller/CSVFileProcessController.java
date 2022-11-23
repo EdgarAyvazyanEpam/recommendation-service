@@ -1,5 +1,6 @@
 package com.recommendationservice.controller;
 
+import com.recommendationservice.service.CryptoImportService;
 import com.recommendationservice.service.UploadFileService;
 import com.recommendationservice.exception.response.ResponseMessage;
 import io.swagger.annotations.Api;
@@ -41,7 +42,7 @@ import org.springframework.web.multipart.MultipartFile;
 })
 public class CSVFileProcessController {
 
-    private final UploadFileService fileService;
+    private final CryptoImportService fileService;
 
     @PostMapping(value = "/upload-crypto-csv", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ApiOperation(

@@ -8,6 +8,7 @@ import com.recommendationservice.repository.CryptoRepository;
 import com.recommendationservice.service.CryptoService;
 import com.recommendationservice.service.util.CryptoHelperImpl;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

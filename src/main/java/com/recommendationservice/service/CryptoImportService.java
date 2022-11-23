@@ -5,6 +5,7 @@ import com.recommendationservice.entity.UploadedFileEntity;
 
 import java.util.List;
 
+import java.util.Map;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
@@ -15,6 +16,11 @@ import org.springframework.web.multipart.MultipartFile;
 public interface CryptoImportService {
     List<CryptoEntity> cryptoProcess(MultipartFile file, UploadedFileEntity uploadedFileEntity);
 
-    List<CryptoEntity> updateCrypto(MultipartFile file, UploadedFileEntity uploadedFileEntity);
+    void updateCrypto(MultipartFile file, UploadedFileEntity uploadedFileEntity);
 
+    UploadedFileEntity processUploadedFile(MultipartFile file);
+
+    UploadedFileEntity saveUploadedFile(MultipartFile file);
+
+    void processUpdateUploadedFile(MultipartFile file);
 }

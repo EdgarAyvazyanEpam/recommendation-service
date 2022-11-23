@@ -9,9 +9,5 @@ import org.springframework.web.multipart.MultipartFile;
  * @project recommendation-service
  */
 public interface UploadFileService {
-    void processUploadedFile(MultipartFile file);
 
-    UploadedFileEntity saveUploadedFile(MultipartFile file);
-
-    void processUpdateUploadedFile(MultipartFile file);
 }
