@@ -25,7 +25,7 @@ import org.springframework.web.multipart.MultipartFile;
 /**
  * @author edgarayvazyan
  * @created 22.11.22
- * @project recomentation-service
+ * @project recommendation-service
  */
 @SpringBootTest
 class CryptoServiceImplTest {
